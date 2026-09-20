@@ -1,9 +1,13 @@
 import axios from 'axios';
 import type { Bus, Detection, RoadIssue, DashboardStats, HeatmapPoint } from '../types';
 
+const baseURL = import.meta.env.VITE_API_URL
+  ? `${(import.meta.env.VITE_API_URL as string).replace(/\/$/, '')}/api`
+  : '/api';
+
 const api = axios.create({
-  baseURL: '/api',
-  timeout: 5000,
+  baseURL,
+  timeout: 10000,
 });
 
 api.interceptors.request.use((config) => {

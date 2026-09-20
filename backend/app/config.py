@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     MODEL_PATH: str = 'ai/models/best.pt'
     JWT_ALGORITHM: str = 'HS256'
     JWT_EXPIRATION_MINUTES: int = 1440
-    CORS_ORIGINS: List[str] = ['http://localhost:5173', 'http://localhost:3000']
+    CORS_ORIGINS: List[str] = ['*']
 
     class Config:
         env_file = ".env"
