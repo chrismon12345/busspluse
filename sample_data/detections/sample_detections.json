@@ -1,0 +1,137 @@
+[
+  {
+    "bus_id": 1,
+    "issue_type": "POTHOLE",
+    "confidence": 0.92,
+    "latitude": 10.0162,
+    "longitude": 76.3421,
+    "timestamp": "2024-01-15T09:05:30",
+    "severity": "HIGH"
+  },
+  {
+    "bus_id": 1,
+    "issue_type": "CRACK",
+    "confidence": 0.85,
+    "latitude": 10.0175,
+    "longitude": 76.3434,
+    "timestamp": "2024-01-15T09:07:15",
+    "severity": "MEDIUM"
+  },
+  {
+    "bus_id": 1,
+    "issue_type": "FADED_MARKING",
+    "confidence": 0.76,
+    "latitude": 10.0188,
+    "longitude": 76.3447,
+    "timestamp": "2024-01-15T09:09:40",
+    "severity": "LOW"
+  },
+  {
+    "bus_id": 2,
+    "issue_type": "BROKEN_SIGNAL",
+    "confidence": 0.98,
+    "latitude": 10.0203,
+    "longitude": 76.3462,
+    "timestamp": "2024-01-15T09:12:05",
+    "severity": "CRITICAL"
+  },
+  {
+    "bus_id": 2,
+    "issue_type": "MISSING_SIGN",
+    "confidence": 0.65,
+    "latitude": 10.0215,
+    "longitude": 76.3474,
+    "timestamp": "2024-01-15T09:15:20",
+    "severity": "MEDIUM"
+  },
+  {
+    "bus_id": 3,
+    "issue_type": "OBSTACLE",
+    "confidence": 0.88,
+    "latitude": 10.0227,
+    "longitude": 76.3486,
+    "timestamp": "2024-01-15T09:18:45",
+    "severity": "HIGH"
+  },
+  {
+    "bus_id": 3,
+    "issue_type": "WATER_LOGGING",
+    "confidence": 0.91,
+    "latitude": 10.0240,
+    "longitude": 76.3500,
+    "timestamp": "2024-01-15T09:22:10",
+    "severity": "HIGH"
+  },
+  {
+    "bus_id": 1,
+    "issue_type": "POTHOLE",
+    "confidence": 0.95,
+    "latitude": 10.0255,
+    "longitude": 76.3515,
+    "timestamp": "2024-01-15T09:25:35",
+    "severity": "CRITICAL"
+  },
+  {
+    "bus_id": 2,
+    "issue_type": "CRACK",
+    "confidence": 0.72,
+    "latitude": 10.0268,
+    "longitude": 76.3528,
+    "timestamp": "2024-01-15T09:28:50",
+    "severity": "LOW"
+  },
+  {
+    "bus_id": 4,
+    "issue_type": "FADED_MARKING",
+    "confidence": 0.69,
+    "latitude": 10.0281,
+    "longitude": 76.3540,
+    "timestamp": "2024-01-15T09:32:15",
+    "severity": "MEDIUM"
+  },
+  {
+    "bus_id": 4,
+    "issue_type": "BROKEN_SIGNAL",
+    "confidence": 0.96,
+    "latitude": 10.0294,
+    "longitude": 76.3553,
+    "timestamp": "2024-01-15T09:35:40",
+    "severity": "CRITICAL"
+  },
+  {
+    "bus_id": 5,
+    "issue_type": "MISSING_SIGN",
+    "confidence": 0.58,
+    "latitude": 10.0305,
+    "longitude": 76.3564,
+    "timestamp": "2024-01-15T09:39:05",
+    "severity": "LOW"
+  },
+  {
+    "bus_id": 5,
+    "issue_type": "OBSTACLE",
+    "confidence": 0.84,
+    "latitude": 10.0318,
+    "longitude": 76.3576,
+    "timestamp": "2024-01-15T09:42:30",
+    "severity": "HIGH"
+  },
+  {
+    "bus_id": 1,
+    "issue_type": "WATER_LOGGING",
+    "confidence": 0.93,
+    "latitude": 10.0330,
+    "longitude": 76.3588,
+    "timestamp": "2024-01-15T09:45:55",
+    "severity": "HIGH"
+  },
+  {
+    "bus_id": 2,
+    "issue_type": "POTHOLE",
+    "confidence": 0.89,
+    "latitude": 10.0342,
+    "longitude": 76.3600,
+    "timestamp": "2024-01-15T09:49:20",
+    "severity": "MEDIUM"
+  }
+]

@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: busplus-db
+    environment:
+      POSTGRES_DB: busplus
+      POSTGRES_USER: busplus
+      POSTGRES_PASSWORD: busplus123
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U busplus']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: busplus-redis
+    ports:
+      - '6379:6379'
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    container_name: busplus-backend
+    ports:
+      - '8000:8000'
+    environment:
+      - DATABASE_URL=postgresql://busplus:busplus123@postgres:5432/busplus
+      - SECRET_KEY=${SECRET_KEY:-busplus-secret-key-change-in-production}
+      - MOCK_AI=${MOCK_AI:-true}
+      - ISSUE_CLUSTER_RADIUS_METERS=${ISSUE_CLUSTER_RADIUS_METERS:-20}
+      - MODEL_PATH=${MODEL_PATH:-ai/models/best.pt}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - ./ai:/ai
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  frontend:
+    build: ./frontend
+    container_name: busplus-frontend
+    ports:
+      - '5173:5173'
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: npm run dev -- --host 0.0.0.0
+
+volumes:
+  postgres_data:
